@@ -455,6 +455,7 @@
     .featured-project:hover {
       border-color: var(--accent);
       box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
     }
     .featured-badge {
       display: inline-block;
@@ -619,8 +620,8 @@
       </ul>
       <!-- Theme Toggle -->
       <div class="theme-toggle" id="themeToggle">
-        <button class="toggle-btn" id="darkBtn" onclick="setTheme('dark')" title="Dark mode">🌙</button>
-        <button class="toggle-btn" id="lightBtn" onclick="setTheme('light')" title="Light mode">☀️</button>
+        <button class="toggle-btn" id="darkBtn" title="Dark mode">🌙</button>
+        <button class="toggle-btn" id="lightBtn" title="Light mode">☀️</button>
       </div>
     </div>
   </nav>
@@ -681,11 +682,40 @@
     <div class="section-label">// work</div>
     <h2 class="section-title">Projects</h2>
 
-    <div class="featured-project">
+    <!-- Featured: Agentic AI Portfolio -->
+    <div class="featured-project" onclick="window.open('https://github.com/12amkh/agentic-ai-portfolio','_blank')" style="cursor:none;">
       <div>
         <div class="featured-badge">⭐ Featured Project</div>
-        <div class="featured-title">SamurAI</div>
-        <p class="featured-desc">An AI-powered text summarization web app. Users input long text and instantly receive a condensed, accurate summary — powered by Facebook's BART-large-CNN model via HuggingFace.</p>
+        <div class="featured-title">Agentic AI Portfolio</div>
+        <p class="featured-desc">9 AI agent projects built from scratch — from a simple LLM call to a production-ready Ultimate Agent that combines RAG, real web search, PDF reading, and LangGraph loops. Every concept understood deeply before written.</p>
+        <div class="project-tags">
+          <span class="tag green">Groq API</span>
+          <span class="tag green">LangGraph</span>
+          <span class="tag">CrewAI</span>
+          <span class="tag">ChromaDB</span>
+          <span class="tag">Tavily</span>
+          <span class="tag">RAG</span>
+          <span class="tag">PyPDF</span>
+        </div>
+      </div>
+      <div class="featured-visual">
+        <div class="flow-step"><span class="flow-icon">🧠</span><span class="flow-text">LLM + Memory Agent</span></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step"><span class="flow-icon">🛠️</span><span class="flow-text">ReAct Agent with Tools</span></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step"><span class="flow-icon">📄</span><span class="flow-text">RAG Pipeline + PDF Reader</span></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step"><span class="flow-icon">🤝</span><span class="flow-text">Multi-Agent (CrewAI)</span></div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step"><span class="flow-icon">🏆</span><span class="flow-text">Ultimate Agent (LangGraph)</span></div>
+      </div>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card" onclick="window.open('https://github.com/12amkh/SamurAi','_blank')" style="cursor:none;">
+        <div class="project-num">// web app</div>
+        <div class="project-title">SamurAI ↗</div>
+        <p class="project-desc">An AI-powered text summarization web app. Users input long text and instantly receive a condensed, accurate summary — powered by Facebook's BART-large-CNN model via HuggingFace.</p>
         <div class="project-tags">
           <span class="tag green">Python</span>
           <span class="tag green">Flask</span>
@@ -694,34 +724,9 @@
           <span class="tag">HTML/CSS</span>
         </div>
       </div>
-      <div class="featured-visual">
-        <div class="flow-step"><span class="flow-icon">📝</span><span class="flow-text">User inputs long text</span></div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step"><span class="flow-icon">🌐</span><span class="flow-text">Flask API processes request</span></div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step"><span class="flow-icon">🤗</span><span class="flow-text">HuggingFace BART model</span></div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step"><span class="flow-icon">✅</span><span class="flow-text">Instant summary returned</span></div>
-      </div>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-num">// 01 — 09</div>
-        <div class="project-title">Agentic AI Portfolio</div>
-        <p class="project-desc">9 AI agent projects built from scratch — from a simple LLM call to a production-ready Ultimate Agent combining RAG, real web search, and LangGraph loops.</p>
-        <div class="project-tags">
-          <span class="tag green">Groq API</span>
-          <span class="tag green">LangGraph</span>
-          <span class="tag">CrewAI</span>
-          <span class="tag">ChromaDB</span>
-          <span class="tag">Tavily</span>
-          <span class="tag">RAG</span>
-        </div>
-      </div>
-      <div class="project-card">
+      <div class="project-card" onclick="window.open('https://github.com/12amkh/agentic-ai-portfolio','_blank')" style="cursor:none;">
         <div class="project-num">// highlight</div>
-        <div class="project-title">Ultimate Agent 🏆</div>
+        <div class="project-title">Ultimate Agent 🏆 ↗</div>
         <p class="project-desc">One agent that combines everything — reads PDFs, searches the real internet, calculates, and uses LangGraph for intelligent loop control.</p>
         <div class="project-tags">
           <span class="tag green">RAG</span>
@@ -731,9 +736,9 @@
           <span class="tag">PyPDF</span>
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card" onclick="window.open('https://github.com/12amkh/agentic-ai-portfolio','_blank')" style="cursor:none;">
         <div class="project-num">// multi-agent</div>
-        <div class="project-title">Drone Research Crew</div>
+        <div class="project-title">Drone Research Crew ↗</div>
         <p class="project-desc">Three specialized agents — Researcher, Analyst, Writer — collaborate using CrewAI to autonomously produce a full industry report on drone technology.</p>
         <div class="project-tags">
           <span class="tag green">CrewAI</span>
@@ -753,11 +758,11 @@
     <h2 class="section-title">Get in Touch</h2>
     <div class="contact-grid">
       <div class="contact-links">
-        <a href="mailto:alkhawaldehahmadmajid@gmail.com" class="contact-link">
+        <a href="/cdn-cgi/l/email-protection#21404d4a494056404d45444940494c40454c404b484561464c40484d0f424e4c" class="contact-link">
           <span class="contact-icon">✉️</span>
           <div class="contact-text">
             <div class="contact-label">Email</div>
-            <div class="contact-value">alkhawaldehahmadmajid@gmail.com</div>
+            <div class="contact-value"><span class="__cf_email__" data-cfemail="5435383f3c3523353830313c353c39353039353e3d30143339353d387a373b39">[email&#160;protected]</span></div>
           </div>
           <span>→</span>
         </a>
@@ -798,6 +803,8 @@
   </footer>
 
   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+
     // Theme
     function setTheme(theme) {
       document.documentElement.setAttribute('data-theme', theme);
@@ -805,6 +812,9 @@
       document.getElementById('darkBtn').classList.toggle('active', theme === 'dark');
       document.getElementById('lightBtn').classList.toggle('active', theme === 'light');
     }
+
+    document.getElementById('darkBtn').addEventListener('click', () => setTheme('dark'));
+    document.getElementById('lightBtn').addEventListener('click', () => setTheme('light'));
 
     // Load saved theme
     const saved = localStorage.getItem('theme') || 'dark';
@@ -840,6 +850,8 @@
       const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
       document.getElementById('scrollIndicator').style.width = pct + '%';
     });
+
+  }); // end DOMContentLoaded
   </script>
 </body>
 </html>
